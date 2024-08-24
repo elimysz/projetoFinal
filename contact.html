@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content />
+    <meta name="author" content />
+    <title>Contato</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/carros.png" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .btn-custom {
+            outline: none;
+            cursor: pointer;
+            border: none;
+            padding: 0.9rem 2rem;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            position: relative;
+            display: inline-block;
+            letter-spacing: 0.05rem;
+            font-weight: 700;
+            font-size: 17px;
+            border-radius: 500px;
+            overflow: hidden;
+            background: #32588a;
+            color: rgba(255, 255, 255, 0.719);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .btn-custom span {
+            position: relative;
+            z-index: 10;
+            transition: color 0.4s;
+        }
+
+        .btn-custom:hover span {
+            color: rgb(94, 127, 179);
+        }
+
+        .btn-custom::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: #405797;
+            width: 120%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        }
+
+        .btn-custom:hover::before {
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .disabled {
+            background: #628d9e;
+            color: #657385;
+            cursor: not-allowed;
+        }
+    </style>
+
+
+</head>
+
+<body class="bgc bg-dark d-flex flex-column">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">🏎️ ​Garagem Cortesia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog-post.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio-overview.html">Portifólio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>>
+        </nav>
+        <!-- Conteúdo da página-->
+        <section class="py-5">
+            <div class="container px-5">
+                <!-- Formulário de contato-->
+                <div class="bg-dark gap-3 bg-light rounded-3 py-5 px-4 px-md-5 mb-5 p-3 mb-2 bg-transparen">
+                    <div class="rounded-3 text-center mb-5 p-2 g-col-6">
+                        <div class="feature bg-warning bg-gradient text-white rounded-circle mb-3"><i
+                                class="bi bi-envelope"></i></div>
+                        <h1 class="fw-bolder text-warning">Entre em contato</h1>
+                        <p class="lead fw-normal text-muted mb-0">Gostaríamos muito de ouvir de você</p>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * Formulário de Contato SB * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- Este formulário está pré-integrado com o SB Forms.-->
+                            <!-- Para tornar este formulário funcional, inscreva-se em-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- para obter um token de API!-->
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <!-- Entrada de nome-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="name" type="text" placeholder="Digite seu nome..." data-sb-validations="required" />
+                                    <label for="name">Nome completo</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">Um nome é
+                                        obrigatório.</div>
+                                </div>
+                                <!-- Entrada de e-mail-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="email" type="email" placeholder="nome@exemplo.com"
+                                        data-sb-validations="required,email" />
+                                    <label for="email">Endereço de e-mail</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">Um e-mail é
+                                        obrigatório.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">O e-mail não é válido.
+                                    </div>
+                                </div>
+                                <!-- Entrada de telefone-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                        data-sb-validations="required" />
+                                    <label for="phone">Número de telefone</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Um número de
+                                        telefone é obrigatório.</div>
+                                </div>
+                                <!-- Entrada de mensagem-->
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message"
+                                        placeholder="Digite sua mensagem aqui..." style="height: 10rem"
+                                        data-sb-validations="required"></textarea>
+                                    <label for="message">Mensagem</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Uma mensagem é
+                                    obrigatória.</div>
+                                </div>
+                                <!-- Mensagem de sucesso no envio-->
+                                <!---->
+                                <!-- É isso que seus usuários verão quando o formulário-->
+                                <!-- for enviado com sucesso-->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3 text-white">
+                                        <div class="fw-bolder">Envio do formulário bem-sucedido!</div>
+                                        Para ativar este formulário, inscreva-se em
+                                        <br>
+                                        <a
+                                            href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <!-- Mensagem de erro no envio-->
+                                <!---->
+                                <!-- É isso que seus usuários verão quando houver-->
+                                <!-- um erro ao enviar o formulário-->
+                                <div class="d-none" id="submitErrorMessage">
+                                    <div class="text-center text-danger mb-3 text-white">Erro ao enviar a mensagem!</div>
+                                </div>
+                                <!-- Botão de envio-->
+                                
+                                <div class="d-grid">
+                                    <button class="btn btn-custom btn-lg disabled" id="submitButton" type="submit">
+                                        <span>Enviar</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <!-- Cartões de contato-->
+                <div class="container py-5">
+                    <div class="row justify-content-center gx-5 row-cols-2 row-cols-lg-4">
+                        <div class="col mb-4 d-flex justify-content-center">
+                            <div class="bg-light rounded-3 p-2 text-center">
+                                <div class="feature bg-warning bg-gradient text-white rounded-circle mb-3"><i class="bi bi-people"></i></div>
+                                <div class="h5 mb-2">Pergunte à comunidade</div>
+                                <p class="text-muted mb-0">Explore nossos fóruns da comunidade e comunique-se com outros usuários.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-4 d-flex justify-content-center">
+                            <div class="bg-light rounded-3 p-2 text-center">
+                                <div class="feature bg-warning bg-gradient text-white rounded-circle mb-3"><i class="bi bi-question-circle"></i></div>
+                                <div class="h5 mb-2">Central de Suporte</div>
+                                <p class="text-muted mb-0">Navegue por perguntas frequentes e artigos de suporte para encontrar soluções.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-4 d-flex justify-content-center">
+                            <div class="bg-light rounded-3 p-2 text-center">
+                                <div class="feature bg-warning bg-gradient text-white rounded-circle mb-3"><i class="bi bi-telephone"></i></div>
+                                <div class="h5 mb-2">Ligue para nós</div>
+                                <p class="text-muted mb-0">Ligue para nós durante o horário comercial normal pelo número (555) 892-9403.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto">
+                        <div class="small m-0 text-white">Copyright &copy; Your Website 2023</div>
+                    </div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="faq2.html">Privacy & Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
